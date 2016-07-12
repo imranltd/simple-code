@@ -41,6 +41,8 @@ Live Demo: http://imransarwar.co.uk/simple-code/
 ## Built With
 
 * AngularJs
+* Angular Sanitize
+* Angular WebSQL
 * JQuery
 * Bootstrap
 * Sass
