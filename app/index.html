@@ -15,14 +15,17 @@
 	<body>
 		<div class="container">
 			<div  class="row">
-				<div class="col-md-5">
-					<div id="starwars-app" class="panel panel-default">
+				<div class="col-sm-6">
+					<div id="simple-code-app" class="panel panel-default">
 						<div class="panel-heading">
 							<h3 class="panel-title">simple code app</h3>
 						</div>
-						<div class="panel-body"  
-							 ng-app="starwarsApp">
-							 kkkk
+						
+						<div class="panel-body">
+							<simple-buttons
+								ng-app="simpleCodeApp"
+								ng-controller="simpleCodeController as vm">
+							</simple-buttons> 
 						</div>
 					</div>
 				</div>

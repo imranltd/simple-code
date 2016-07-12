@@ -1,18 +1,29 @@
 (function(){
 
 	angular
-		.module('starwarsApp', [])
-		.controller('starwarsController', ['$scope',
-			function($scope) {
-				
+		.module('simpleCodeApp', [])
+		.service('getColorsService', function($http) {
+			return $http.get("data/data.json")
+				.then(function(res){
+					return res.data;
+			});
+		})
+		.controller('simpleCodeController', ['$scope', 'getColorsService',
+			function($scope, getColorsService) {
+				var vm = this;
+
+				getColorsService.then(function(data){
+					console.log(data.colors);
+					vm.colors = data.colors;
+				});
 			}
 			
 		])
 
-		.directive('starwarsSearch', function() {
+		.directive('simpleButtons', function() {
 			return {
 				restrict: 'E',
-				templateUrl: 'templates/starwars-search.html'
+				templateUrl: 'templates/simple-buttons.html'
 			};
 		});
 		

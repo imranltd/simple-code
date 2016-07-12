@@ -41,6 +41,9 @@ gulp.task('copyHtml', function() {
 
 	gulp.src('app/templates/*.html')
 		.pipe(gulp.dest('public/templates'));
+
+	gulp.src('app/data/*.*')
+		.pipe(gulp.dest('public/data'));
 });
 
 gulp.task('copyVendorScripts', function() {
