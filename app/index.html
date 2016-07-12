@@ -6,13 +6,19 @@
 		<title>Simple code</title>
 
 		<script type="text/javascript" src="vendor/angular/angular.js"></script>
-		<script type="text/javascript" src="vendor/angular-sqlite/angular-sqlite.js"></script>
+		<script type="text/javascript" src="vendor/angular-sanitize/angular-sanitize.js"></script>
+		<script type="text/javascript" src="js/angular-websql.js"></script>
 		
 		<script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
 		<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></script>
 		
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/app.css">
+
+		<script type="text/javascript" src="js/app.service.js"></script>
+		<script type="text/javascript" src="js/app.controller.js"></script>
+		<script type="text/javascript" src="js/app.filter.js"></script>
+		<script type="text/javascript" src="js/app.directive.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -20,19 +26,18 @@
 				<div class="col-sm-6">
 					<div id="simple-code-app" class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">simple code app</h3>
+							<h3 class="panel-title">Simple code app</h3>
 						</div>
 						
-						<div class="panel-body">
-							<simple-buttons
-								ng-app="simpleCodeApp"
-								ng-controller="simpleCodeController as vm">
-							</simple-buttons> 
+						<div class="panel-body" 
+							 ng-app="MySimpleCodeApp"
+							 ng-controller="simpleCodeController as vm">
+							<simple-buttons id="simpleButtonApp"></simple-buttons> 
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="js/app.js"></script>
+
 	</body>
 </html>
