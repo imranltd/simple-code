@@ -65,6 +65,9 @@ gulp.task('copyVendorScripts', function() {
 
 	gulp.src('app/templates/*.*')
 		.pipe(gulp.dest('public/templates'));
+
+	gulp.src('node_modules/angular-sqlite/angular-sqlite.js')
+		.pipe(gulp.dest('public/vendor/angular-sqlite'));
 });
 
 gulp.task('build', ['copyHtml', 'jshint', 'copyVendorScripts', 'sass']);
